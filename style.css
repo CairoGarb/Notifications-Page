@@ -1,0 +1,298 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+
+:root {
+    /* Primary Colors */
+    --Red: #f65351;
+    --Blue: #0a317b;
+    /* Neutral Colors */
+    --White: #ffffff;
+    --Very-light-grayish-blue: #f7fafd;
+    --Light-grayish-blue-1: #e5effa;
+    --Light-grayish-blue-2: #dde7ee;
+    --Grayish-blue: #939dae;
+    --Dark-grayish-blue: #5e6778;
+    --Very-dark-blue: #1c202b;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+figure, img {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    min-height: 100vh;
+    min-width: 1440px;
+    max-width: 100%;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--Very-light-grayish-blue);
+}
+
+.container {
+    background-color: var(--White);
+    padding: 20px 20px 0 20px;
+    border-radius: 10px;
+    box-shadow: 0 1px 15px #0a317b20;
+    max-width: auto;
+    margin-top: 15px;
+}
+
+/* Header */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.header h1 {
+    font-size: 24px;
+    font-weight: 800;
+    display: flex;
+    align-items: center;
+}
+.header h1 span {
+    background-color: var(--Blue);
+    color: var(--White);
+    padding: 5px 8px 5px;
+    font-size: 12px;
+    font-weight: 500;
+    border-radius: 5px;
+    margin-left: 5px;
+}
+.header #mark {
+    font-size: 16px;
+    color: var(--Grayish-blue);
+    font-weight: 600;
+}
+.header #mark:hover {
+    cursor: pointer;
+    transition: .2s;
+    color: var(--Blue);
+}
+/* Header */
+
+/* Notifications */
+.notifications {
+    display: flex;
+    flex-direction: column;
+}
+
+.notify-box {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    width: 650px;
+    border-radius: 10px;
+    padding: 15px;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+.rh {
+    flex-direction: column;
+    align-items: end;
+}
+.ks {
+    justify-content: space-between;
+}
+.notify-box.unread {
+    background-color: #dde7ee6b;
+    box-shadow: 0 1px 4px #939dae59;
+}
+.mw-img, .ag-img, .jt-img, .rh-img, .ks-img, .np-img, .ak-img {
+    width: 5%;
+}
+.rh-head {
+    display: flex;
+    width: 100%;
+    gap: 15px;
+}
+.rh-msg {
+    max-width: 90%;
+    padding: 15px;
+    color: var(--Dark-grayish-blue);
+    border: 1px solid #5e67782e;
+    border-radius: 5px;
+}
+.rh-msg:hover {
+    background-color: var(--Light-grayish-blue-1);
+    cursor: pointer;
+    transition: .2s;
+    border-color: var(--Light-grayish-blue-1);
+}
+.ks-text {
+    margin-left: -195px;
+}
+.mw-text p, .ag-text p, .jt-text p, .rh-text p, .ks-text p, .np-text p, .ak-text p {
+    color: var(--Dark-grayish-blue);
+    font-weight: 500;
+    padding-bottom: 2px;
+    max-width: 600px;
+}
+.notify-box.unread .mw-text p::after, .notify-box.unread .ag-text p::after, .notify-box.unread .jt-text p::after, .notify-box.unread .rh-text p::after, .notify-box.unread .ks-text p::after, .notify-box.unread .np-text p::after, .notify-box.unread .ak-text p::after {
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: var(--Red);
+    margin-top: 7.5px;
+    margin-left: 5px;
+}
+.mw-text p strong, .ag-text p strong, .jt-text p strong, .rh-text p strong, .ks-text p strong, .np-text p strong, .ak-text p strong {
+    color: var(--Very-dark-blue);
+}
+.mw-text p strong:hover, .ag-text p strong:hover, .jt-text p strong:hover, .rh-text p strong:hover, .ks-text p strong:hover, .np-text p strong:hover, .ak-text p strong:hover {
+    color: var(--Blue);
+    cursor: pointer;
+    transition: .2s;
+}
+.mw-text p span, .ag-text p span, .jt-text p span, .rh-text p span, .ks-text p span, .np-text p span, .ak-text p span {
+    font-weight: 800;
+}
+.mw-text p span:hover, .jt-text p span:hover, .np-text p span:hover, .ak-text p span:hover {
+    color: var(--Blue);
+    cursor: pointer;
+    transition: .2s;
+}
+.time {
+    color: var(--Grayish-blue);
+    font-weight: 500;
+}
+.group {
+    color: var(--Blue);
+}
+.ks-pic {
+    width: 5%;
+}
+.ks-pic:hover {
+    border: 2px solid var(--Light-grayish-blue-1);
+    border-radius: 5px;
+    cursor: pointer;
+    scale: 1.4;
+    transition: .3s;
+}
+/* Notifications */
+
+/* Footer */
+.attribution { font-size: 11px; text-align: center; margin-top: 10px; margin-bottom: 10px; }
+.attribution a { color: hsl(228, 45%, 44%); }
+/* Footer */
+
+/* Responsiveness */
+
+/* Smaller Laptops */
+@media screen and (min-width: 900px) and (max-width: 1339px) {
+    body {
+        min-width: 900px;
+        max-width: 1339px;
+    }
+}
+/* Tablets */
+@media screen and (min-width: 700px) and (max-width: 900px) {
+    body {
+        min-width: 700px;
+        max-width: 900px;
+    }
+}
+/* Smaller Tablets */
+@media screen and (max-width: 700px) {
+    body {
+        min-width: 500px;
+        max-width: 700px;
+    }
+    .notify-box {
+        width: 450px;
+    }
+    .ks-text {
+        margin-left: 0;
+    }
+    .mw-img, .ag-img, .jt-img, .rh-img, .ks-img, .np-img, .ak-img {
+        width: 10%;
+    }
+    .mw-text p, .ag-text p, .jt-text p, .rh-text p, .ks-text p, .np-text p, .ak-text p {
+        max-width: 400px;
+    }
+    .ks-pic {
+        width: 10%;
+    }
+}
+/* Mobiles */
+@media screen and (max-width: 500px) {
+    body {
+        min-width: 400px;
+        max-width: 500px;
+        font-size: 14px;
+    }
+    .notify-box {
+        width: 350px;
+    }
+    .ks-text {
+        margin-left: 0;
+    }
+    .mw-text p, .ag-text p, .jt-text p, .rh-text p, .ks-text p, .np-text p, .ak-text p {
+        max-width: 300px;
+    }
+}
+@media screen and (max-width: 400px) {
+    body {
+        min-width: 350px;
+        max-width: 400px;
+    }
+    .notify-box {
+        width: 300px;
+    }
+    .ks-text {
+        margin-left: 5px;
+    }
+    .mw-text p, .ag-text p, .jt-text p, .rh-text p, .ks-text p, .np-text p, .ak-text p {
+        max-width: 250px;
+    }
+    .header h1 {
+        font-size: 18px;
+    }
+    .header #mark {
+        font-size: 12px;
+        color: var(--Grayish-blue);
+        font-weight: 600;
+    }
+}
+@media screen and (max-width: 350px) {
+    body {
+        min-width: 300px;
+        max-width: 350px;
+        font-size: 10px;
+    }
+    .notify-box {
+        width: 200px;
+    }
+    .ks-text {
+        margin-left: 0;
+    }
+    .mw-text p, .ag-text p, .jt-text p, .rh-text p, .ks-text p, .np-text p, .ak-text p {
+        max-width: 150px;
+    }
+    .header h1 {
+        font-size: 14px;
+    }
+    .header h1 span {
+        padding: 2px 4px;
+        font-size: 10px;
+    }
+    .header #mark {
+        font-size: 8px;
+        color: var(--Grayish-blue);
+        font-weight: 600;
+    }
+}
